@@ -5,7 +5,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Plus, Minus } from "lucide-react";
 
 const FaqSection = () => {
   const faqs = [
@@ -55,17 +54,15 @@ const FaqSection = () => {
           </div>
 
           <div className="max-w-[768px] mx-auto">
-            <Accordion type="single" collapsible className="w-full space-y-4">
+            <Accordion className="w-full space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="border-b border-[#E5E7EB] py-2"
+                  className="border-b border-[#E5E7EB] py-4"
                 >
-                  <AccordionTrigger className="text-left text-[18px] font-semibold text-black hover:no-underline group">
-                    <span>{faq.question}</span>
-                    {/* Custom Icons based on open/close state logic if needed, 
-                        shadcn Accordion usually manages this with data attr */}
+                  <AccordionTrigger className="text-left text-[18px] font-semibold text-black hover:no-underline hover:text-primary transition-colors">
+                    {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-[#4B5563] text-base leading-relaxed pt-2">
                     {faq.answer}
