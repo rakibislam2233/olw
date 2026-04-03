@@ -1,8 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { Button } from "../ui/button";
 // Using require for images as they are guaranteed to be there but Next.js static imports need to match path
 import brand1 from "@/assets/home/hero-section/brand-1.png";
 import brand2 from "@/assets/home/hero-section/brand-2.png";
@@ -29,11 +28,10 @@ const HeroSection = () => {
       {/* Top Gradient Glow (subtle red/pink to transparent) */}
       <div className="absolute top-0 left-0 right-0 h-[200px] bg-linear-to-b from-[#ED3C6A20] to-transparent pointer-events-none z-0" />
 
-      {/* Floating Elements Container - Hidden on mobile for cleaner look */}
-      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden hidden lg:block">
+      {/* Floating Elements Container - Now shown on all devices with responsive scaling */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 w-full max-w-[1200px] -translate-x-1/2 -translate-y-1/2 h-full">
-          {/* Floating Brands */}
-          <div className="absolute top-[15%] left-[15%] animate-float">
+          <div className="absolute top-[2%] lg:top-[15%] left-[5%] lg:left-[15%] animate-float scale-75 lg:scale-100">
             <Image
               src={brand1}
               alt="Brand 1"
@@ -43,7 +41,7 @@ const HeroSection = () => {
             />
           </div>
 
-          <div className="absolute top-[18%] right-[17%] animate-float-delayed">
+          <div className="absolute top-[3%] lg:top-[18%] right-[5%] lg:right-[17%] animate-float-delayed scale-75 lg:scale-100">
             <Image
               src={brand2}
               alt="Brand 2"
@@ -53,7 +51,7 @@ const HeroSection = () => {
             />
           </div>
 
-          <div className="absolute bottom-[20%] left-[20%] animate-float">
+          <div className="absolute bottom-[5%] lg:bottom-[20%] left-[8%] lg:left-[20%] animate-float scale-75 lg:scale-100">
             <Image
               src={brand3}
               alt="Brand 3"
@@ -63,7 +61,7 @@ const HeroSection = () => {
             />
           </div>
 
-          <div className="absolute bottom-[15%] right-[22%] animate-float-delayed">
+          <div className="absolute bottom-[2%] lg:bottom-[15%] right-[10%] lg:right-[22%] animate-float-delayed scale-75 lg:scale-100">
             <Image
               src={brand4}
               alt="Brand 4"
@@ -72,7 +70,6 @@ const HeroSection = () => {
               className="drop-shadow-xl"
             />
           </div>
-
           {/* Colorful Dots */}
           <div className="absolute top-[25%] left-[5%] w-3 h-3 rounded-full bg-[#635BFF]" />
           <div className="absolute top-[10%] left-[55%] w-3 h-3 rounded-full bg-[#00E59B]" />
@@ -83,7 +80,6 @@ const HeroSection = () => {
           <div className="absolute bottom-[15%] right-[10%] w-2 h-2 rounded-full bg-[#1B274C]" />
         </div>
       </div>
-
       {/* Main Content */}
       <div className="container relative z-10 mx-auto px-4 text-center max-w-[800px] flex flex-col items-center">
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#000000] leading-[1.1] mb-6 md:mb-8 tracking-tight">

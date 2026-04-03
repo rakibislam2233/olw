@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
 // Importing companies SVG logos
 import company1 from "@/assets/home/partner/company1.svg";
@@ -22,25 +23,28 @@ const PartnerSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-12 md:py-16">
+    <section className="w-full bg-white py-12 md:py-16 overflow-hidden">
       <div className="w-full mx-auto">
         <h2 className="text-center text-[18px] md:text-[22px] font-bold text-[#000000] mb-10 px-4">
           Trusted by leaders in 50+ industries
         </h2>
-        <div className="flex flex-wrap items-center bg-[#F8F9FA] justify-center gap-6 md:gap-12 lg:gap-16 px-6 py-10 md:py-8">
-          {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center transition-all duration-300 transform hover:scale-110 grayscale hover:grayscale-0 opacity-60 hover:opacity-100"
-            >
-              <Image
-                src={partner.logo}
-                alt={partner.name}
-                height={40}
-                className="w-auto h-8 md:h-9 lg:h-[40px] max-w-[120px] md:max-w-[160px] cursor-pointer"
-              />
-            </div>
-          ))}
+        
+        <div className="bg-[#F8F9FA] py-10 md:py-8">
+          <Marquee gradient={false} speed={50} pauseOnHover={true}>
+            {partners.concat(partners).map((partner, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center mx-8 md:mx-12 transition-all duration-300 transform hover:scale-110 grayscale hover:grayscale-0 opacity-60 hover:opacity-100"
+              >
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  height={40}
+                  className="w-auto h-8 md:h-9 lg:h-[40px] max-w-[120px] md:max-w-[160px] cursor-pointer"
+                />
+              </div>
+            ))}
+          </Marquee>
         </div>
       </div>
     </section>
