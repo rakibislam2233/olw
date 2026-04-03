@@ -1,15 +1,14 @@
 "use client";
-
 import React from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { ArrowRight, Check } from "lucide-react";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 import malePerson from "@/assets/home/metting/male-person.png";
 import brandGroup from "@/assets/home/metting/brand-group.png";
 import calendar from "@/assets/home/metting/clander.png";
-import decorator from "@/assets/home/metting/image.png";
+import decorator from "@/assets/home/metting/decoretor.png";
 import projectCard from "@/assets/home/metting/project.png";
 
 const WhyChooseUs = () => {
@@ -20,7 +19,7 @@ const WhyChooseUs = () => {
     "We have experts in our team",
   ];
 
-  const staggerContainer: Variants = {
+  const staggerContainer = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -28,16 +27,6 @@ const WhyChooseUs = () => {
         staggerChildren: 0.15,
       },
     },
-  };
-
-  const fadeInUp: Variants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
-
-  const scaleIn: Variants = {
-    hidden: { scale: 0.9, opacity: 0 },
-    visible: { scale: 1, opacity: 1, transition: { duration: 0.8 } },
   };
 
   return (
@@ -61,27 +50,23 @@ const WhyChooseUs = () => {
             viewport={{ once: true }}
             className="relative z-10 flex flex-col lg:w-1/2"
           >
-            <motion.h2
-              variants={fadeInUp}
-              className="mb-8 text-3xl font-extrabold leading-tight text-[#1E1E1E] md:text-4xl lg:text-[42px]"
-            >
+            <motion.h2 className="mb-8 text-3xl font-extrabold leading-tight text-[#1E1E1E] md:text-4xl lg:text-[42px]">
               Few Reasons Why you <br className="hidden md:block" /> Choose us?
             </motion.h2>
 
-            <motion.p
-              variants={fadeInUp}
-              className="mb-10 max-w-[480px] text-sm leading-relaxed text-black/70 md:text-base opacity-80"
-            >
+            <motion.p className="mb-10 max-w-[480px] text-sm leading-relaxed text-black/70 md:text-base opacity-80">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris.
             </motion.p>
 
-            <motion.ul variants={staggerContainer} className="mb-12 flex flex-col gap-5">
+            <motion.ul
+              variants={staggerContainer}
+              className="mb-12 flex flex-col gap-5"
+            >
               {reasons.map((reason, index) => (
                 <motion.li
                   key={index}
-                  variants={fadeInUp}
                   className="flex items-center gap-4 group"
                 >
                   <motion.span
@@ -97,7 +82,7 @@ const WhyChooseUs = () => {
               ))}
             </motion.ul>
 
-            <motion.div variants={fadeInUp}>
+            <motion.div>
               <Button className="h-[55px] w-fit rounded-[8px] bg-primary px-10 font-bold text-white hover:bg-primary/90 flex items-center gap-3 transition-all shadow-[0px_10px_25px_rgba(237,60,106,0.25)]">
                 Schedule A Meeting <ArrowRight className="h-5 w-5" />
               </Button>
@@ -105,22 +90,15 @@ const WhyChooseUs = () => {
           </motion.div>
 
           {/* ───── Right Visuals ───── */}
-          <div className="relative mt-20 w-full lg:mt-0 lg:w-1/2 lg:h-[550px] flex items-center justify-center">
+          <div className="relative mt-20 w-full lg:mt-0 lg:w-1/2 flex items-center justify-center">
             <motion.div
-              variants={scaleIn}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="relative w-[320px] md:w-[420px] lg:w-[500px]"
+              className="relative w-[320px] md:w-[420px] lg:w-[800px]"
             >
               {/* Pink blob */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-                className="opacity-90"
-              >
-                <Image src={decorator} alt="" className="w-full h-auto" />
-              </motion.div>
+              <Image src={decorator} alt="image" className="w-full h-auto" />
 
               {/* Person — centered on blob, bottom-aligned */}
               <motion.div
@@ -139,11 +117,7 @@ const WhyChooseUs = () => {
               </motion.div>
 
               {/* ── Floating: Project Card ── */}
-              <motion.div
-                animate={{ y: [0, -15, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -left-10 top-[15%] z-20 w-[160px] md:w-[210px] hidden sm:block"
-              >
+              <motion.div className="absolute -left-5 -top-[15%] z-20 w-[160px] md:w-[250px] hidden sm:block">
                 <Image
                   src={projectCard}
                   alt="Project listing"
@@ -152,11 +126,7 @@ const WhyChooseUs = () => {
               </motion.div>
 
               {/* ── Floating: Brand Group — top right ── */}
-              <motion.div
-                animate={{ y: [0, 15, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute -right-8 top-[10%] z-20 w-[100px] md:w-[150px]"
-              >
+              <motion.div className="absolute -right-8 -top-[38%] z-20 w-[100px] md:w-[200px]">
                 <Image
                   src={brandGroup}
                   alt="Trusted brands"
@@ -165,11 +135,7 @@ const WhyChooseUs = () => {
               </motion.div>
 
               {/* ── Floating: Calendar — bottom left ── */}
-              <motion.div
-                animate={{ x: [0, 10, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -left-12 bottom-[5%] z-20 w-[150px] md:w-[200px] hidden sm:block"
-              >
+              <motion.div className="absolute -left-12 -bottom-[25%] z-20 w-[150px] md:w-[240px] hidden sm:block">
                 <Image
                   src={calendar}
                   alt="Booking calendar"
