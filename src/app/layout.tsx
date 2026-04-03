@@ -9,6 +9,7 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 const dmSans = DM_Sans({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
