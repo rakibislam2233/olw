@@ -7,12 +7,12 @@ import logo from "@/assets/logo/google-logo.png";
 import { ArrowRight } from "lucide-react";
 const Navbar = () => {
   const navLinks = [
-    { href: "#", label: "Home", isActive: true },
-    { href: "#", label: "About", isActive: false },
-    { href: "#", label: "Services", isActive: false },
-    { href: "#", label: "Pricing", isActive: false },
-    { href: "#", label: "Blog", isActive: false },
-    { href: "#", label: "Resources", isActive: false },
+    { href: "/", label: "Home", isActive: true },
+    { href: "/", label: "About", isActive: false },
+    { href: "/", label: "Services", isActive: false },
+    { href: "/", label: "Pricing", isActive: false },
+    { href: "/", label: "Blog", isActive: false },
+    { href: "/", label: "Resources", isActive: false },
   ];
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-[0px_4px_62px_0px_#FAC4D2A1]">
@@ -26,7 +26,7 @@ const Navbar = () => {
         {/* Nav Links */}
         <div className="flex items-center gap-4">
           <nav className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => (
+            {navLinks?.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}

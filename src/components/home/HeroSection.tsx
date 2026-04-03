@@ -34,34 +34,40 @@ const HeroSection = () => {
         <div className="absolute top-1/2 left-1/2 w-full max-w-[1200px] -translate-x-1/2 -translate-y-1/2 h-full">
           {/* Floating Brands */}
           {/* Brand 1 (Top Left) */}
-          <div className="absolute top-[15%] left-[15%] -rotate-[4.84deg]">
-            <Image src={brand1} alt="Brand 1" width={106.24} height={106.24} />
+          <div className="absolute top-[15%] left-[15%]">
+            <Image
+              src={brand1}
+              alt="Brand 1"
+              width={95}
+              height={95}
+              className="drop-shadow-xl"
+            />
           </div>
 
           {/* Brand 2 (Top Right) */}
-          <div className="absolute top-[18%] right-[15%] rotate-18">
+          <div className="absolute top-[18%] right-[17%]">
             <Image
               src={brand2}
               alt="Brand 2"
-              width={90}
-              height={90}
+              width={70}
+              height={70}
               className="drop-shadow-xl"
             />
           </div>
 
           {/* Brand 3 (Bottom Left) */}
-          <div className="absolute bottom-[20%] left-[20%] rotate-12">
+          <div className="absolute bottom-[20%] left-[20%]">
             <Image
               src={brand3}
               alt="Brand 3"
-              width={85}
-              height={85}
+              width={75.89}
+              height={75.89}
               className="drop-shadow-xl"
             />
           </div>
 
           {/* Brand 4 (Bottom Right) */}
-          <div className="absolute bottom-[10%] right-[22%] -rotate-20">
+          <div className="absolute bottom-[15%] right-[22%]">
             <Image
               src={brand4}
               alt="Brand 4"
@@ -84,26 +90,26 @@ const HeroSection = () => {
 
       {/* Main Content */}
       <div className="container relative z-10 mx-auto px-4 text-center max-w-[800px] flex flex-col items-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#000000] leading-[1.1] mb-6 tracking-tight">
+        <h1 className="text-4xl md:text-5xl font-bold text-[#000000] leading-[1.1] mb-8 tracking-tight max-w-[500px]">
           Airbnb Assistants For <br />{" "}
           <span className="text-[38.13px] font-medium text-[#000000]">
             Property Management
           </span>
         </h1>
-        <p className="text-[#4E4E4E] text-sm md:text-base leading-relaxed max-w-[620px] mb-10">
+        <p className="text-[#000000] font-medium text-sm md:text-base leading-relaxed max-w-[620px] mb-10">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
         </p>
 
-        <Button className="w-full sm:w-[220px] h-[50px] px-6 py-[18px] mb-6 rounded-[5px] bg-primary hover:bg-primary/90 text-white text-base font-medium shadow-[0px_4px_12px_rgba(237,60,106,0.3)] flex items-center justify-center gap-2 cursor-pointer transition-all hover:-translate-y-1">
+        <Button className="w-full max-w-[240px] h-[50px] px-6 py-[18px] mb-[27px] rounded-[5px] bg-primary hover:bg-primary/90 text-white text-base font-bold flex items-center justify-center gap-2 cursor-pointer transition-all">
           Schedule A Meeting <ArrowRight className="w-5 h-5 ml-1" />
         </Button>
 
         <Link
           href="#"
-          className="text-[15px] font-semibold text-[#1E1E1E] underline decoration-1 underline-offset-4 hover:text-primary transition-colors"
+          className="text-[14px] font-semibold text-[#1E1E1E] underline decoration-1 underline-offset-4 hover:text-primary transition-colors"
         >
           See Pricing
         </Link>
