@@ -30,14 +30,14 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section className="w-full bg-white py-12 lg:py-24">
+    <section className="w-full bg-white pt-[84px]">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative mx-auto flex w-full max-w-[1240px] flex-col rounded-[32px] border border-[#F8BECD] bg-[#FFF0F4] p-8 md:p-14 lg:flex-row lg:items-center lg:p-16 lg:min-h-[620px] shadow-[0px_20px_60px_rgba(237,60,106,0.05)] overflow-hidden"
+          className="relative mx-auto flex w-full max-w-[1240px] flex-col rounded-[33px] border border-[#F8BECD] bg-[#FFF0F4] p-8 md:p-14 lg:flex-row lg:items-center lg:p-16 lg:min-h-[620px] shadow-[0px_20px_60px_rgba(237,60,106,0.05)] overflow-hidden"
         >
           {/* Subtle background glow */}
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#ED3C6A05] rounded-full blur-[100px] pointer-events-none" />
@@ -50,11 +50,11 @@ const WhyChooseUs = () => {
             viewport={{ once: true }}
             className="relative z-10 flex flex-col lg:w-1/2"
           >
-            <motion.h2 className="mb-8 text-3xl font-extrabold leading-tight text-[#1E1E1E] md:text-4xl lg:text-[42px]">
+            <motion.h2 className="mb-[26px] text-3xl font-bold leading-tight text-[#1E1E1E] md:text-[36px]">
               Few Reasons Why you <br className="hidden md:block" /> Choose us?
             </motion.h2>
 
-            <motion.p className="mb-10 max-w-[480px] text-sm leading-relaxed text-black/70 md:text-base opacity-80">
+            <motion.p className="mb-[30px] text-sm font-semibold text-black max-w-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris.
@@ -62,20 +62,20 @@ const WhyChooseUs = () => {
 
             <motion.ul
               variants={staggerContainer}
-              className="mb-12 flex flex-col gap-5"
+              className="mb-[45px] flex flex-col gap-5"
             >
               {reasons.map((reason, index) => (
                 <motion.li
                   key={index}
-                  className="flex items-center gap-4 group"
+                  className="flex items-center gap-2 group"
                 >
                   <motion.span
                     whileHover={{ scale: 1.1 }}
-                    className="flex h-[32px] w-[32px] flex-shrink-0 items-center justify-center rounded-full bg-white text-primary shadow-sm border border-primary/10 transition-colors"
+                    className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary/25 text-primary"
                   >
-                    <Check className="h-4 w-4" strokeWidth={3} />
+                    <Check className="h-4 w-4" />
                   </motion.span>
-                  <span className="text-base font-bold text-[#1E1E1E] md:text-lg">
+                  <span className="text-base font-bold text-[#1E1E1E]">
                     {reason}
                   </span>
                 </motion.li>
@@ -83,7 +83,7 @@ const WhyChooseUs = () => {
             </motion.ul>
 
             <motion.div>
-              <Button className="h-[55px] w-fit rounded-[8px] bg-primary px-10 font-bold text-white hover:bg-primary/90 flex items-center gap-3 transition-all shadow-[0px_10px_25px_rgba(237,60,106,0.25)]">
+              <Button className="h-[50px] w-fit rounded-[5px] bg-primary px-6 font-bold text-sm text-white hover:bg-primary/90 flex items-center gap-3 transition-all cursor-pointer">
                 Schedule A Meeting <ArrowRight className="h-5 w-5" />
               </Button>
             </motion.div>
