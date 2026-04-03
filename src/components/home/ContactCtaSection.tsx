@@ -13,13 +13,13 @@ import avatar3 from "@/assets/home/testimonial/testimonial3.png";
 const ContactCtaSection = () => {
   return (
     <section className="w-full bg-white pb-20 lg:pb-32">
-      <div className="container mx-auto px-4 md:px-5">
+      <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="bg-[#F9FAFB] rounded-[32px] p-10 md:p-16 text-center flex flex-col items-center shadow-[0px_10px_50px_rgba(0,0,0,0.02)] border border-[#EDEDED]"
+          className="bg-[#F9FAFB] rounded-[16px] p-8 text-center flex flex-col items-center"
         >
           {/* Grouped Avatars */}
           <motion.div
@@ -54,7 +54,7 @@ const ContactCtaSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="text-3xl md:text-[38px] font-bold text-[#1E1E1E] mb-5 tracking-tight"
+            className="text-xl md:text-[30px] font-bold text-[#1E1E1E] mb-5 tracking-tight"
           >
             Still have Questions?
           </motion.h3>
@@ -64,7 +64,7 @@ const ContactCtaSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
-            className="text-[#64748B] text-base md:text-lg max-w-[620px] mb-12 font-medium"
+            className="text-[#9C9C9C] text-base md:text-[18px] max-w-[620px] mb-12 font-medium"
           >
             Can&apos;t find the answer you&apos;re looking for? Please chat to our friendly team.
           </motion.p>
@@ -77,7 +77,7 @@ const ContactCtaSection = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button className="h-[55px] px-10 bg-primary hover:bg-primary/95 text-white rounded-[10px] font-bold text-lg transition-all shadow-[0px_10px_25px_rgba(237,60,106,0.3)]">
+            <Button className="h-[60px] px-10 bg-primary hover:bg-primary/95 text-white rounded-[8px] font-bold text-lg transition-all">
               Get in touch
             </Button>
           </motion.div>

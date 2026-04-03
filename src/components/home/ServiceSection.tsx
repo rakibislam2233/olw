@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 // Import service icons
 import icon1 from "@/assets/home/service/icon1.png";
@@ -47,7 +47,7 @@ const ServiceSection = () => {
     },
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -57,7 +57,7 @@ const ServiceSection = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,

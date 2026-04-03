@@ -14,7 +14,7 @@ const FaqSection = () => {
     {
       question: "Is there a free trial available?",
       answer:
-        "Yes, you can try our platform free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+        "Yes, you can try our platform free for 30 days. No credit card required to get started with your first property listing.",
     },
     {
       question: "Can I manage properties across different countries?",
@@ -36,47 +36,44 @@ const FaqSection = () => {
       answer:
         "Simply click 'Schedule a Meeting' or sign up for a free trial. Our onboarding team will help you set up your listings in minutes.",
     },
-    {
-      question: "How do I change my account email?",
-      answer:
-        "You can change your account email in the settings page of your dashboard. If you need help, our support team is available 24/7.",
-    },
   ];
 
   return (
-    <section className="w-full bg-white py-16 lg:py-24">
-      <div className="container mx-auto px-4 md:px-5">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-[42px] font-bold text-black mb-6">
-            Frequently Asked <span className="text-primary">Questions</span>
-          </h2>
-          <p className="text-[#64748B] text-base md:text-lg leading-relaxed max-w-[700px] mx-auto font-medium">
-            Everything you need to know about the product and billing.
-          </p>
-        </motion.div>
+    <section className="w-full bg-white pb-20 lg:pb-32">
+      <div className="container mx-auto">
+        <div className="bg-[#F9FAFB] rounded-[16px] p-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-[36px] font-bold text-black mb-6">
+              Frequently Asked <span className="text-primary">Questions</span>
+            </h2>
+            <p className="text-[#000000] text-sm md:text-[20px] leading-relaxed max-w-[700px] mx-auto opacity-70">
+              Everything you need to know about the product and billing.
+            </p>
+          </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-[1000px] mx-auto"
-        >
-          <Accordion className="w-full border-t border-[#ED3C6A20]">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger>{faq.question}</AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="max-w-3xl mx-auto"
+          >
+            <Accordion className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger>{faq.question}</AccordionTrigger>
+                  <AccordionContent>{faq.answer}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

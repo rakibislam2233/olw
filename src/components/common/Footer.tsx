@@ -163,9 +163,9 @@ const Footer = () => {
       </div>
 
       {/* Copyright Bar */}
-      <div className="w-full bg-[#100325] py-10 text-center">
+      <div className="w-full bg-[#230B41] py-5 text-center">
         <p className="text-white text-sm md:text-base font-medium opacity-80">
-          © Copyright 2024, All Rights Reserved by XYZ
+          © Copyright {new Date().getFullYear()}, All Rights Reserved by <span className="text-primary">OLW</span>
         </p>
       </div>
     </footer>

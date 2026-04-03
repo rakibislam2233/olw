@@ -1,8 +1,7 @@
 "use client";
-
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 // Import step icons
 import person from "@/assets/home/how-it-work/person.png";
@@ -28,7 +27,7 @@ const GetStartedSection = () => {
     },
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -38,7 +37,7 @@ const GetStartedSection = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -82,19 +81,26 @@ const GetStartedSection = () => {
               className="flex flex-col items-center group"
             >
               <motion.div
-                whileHover={{ y: -8, boxShadow: "0px 20px 40px rgba(237,60,106,0.15)" }}
+                whileHover={{
+                  y: -8,
+                  boxShadow: "0px 20px 40px rgba(237,60,106,0.15)",
+                }}
                 className="relative w-full max-w-[300px] h-[200px] bg-white border-2 border-[#ED3C6A15] rounded-[16px] flex items-center justify-center mb-10 transition-all duration-300"
               >
                 {/* Step Number Bubble */}
                 <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
-                  transition={{ delay: 0.3 + index * 0.1, type: "spring", stiffness: 200 }}
+                  transition={{
+                    delay: 0.3 + index * 0.1,
+                    type: "spring",
+                    stiffness: 200,
+                  }}
                   className="absolute -top-6 -left-6 size-16 rounded-full border-[6px] border-primary bg-white flex items-center justify-center text-xl font-bold text-[#1E1E1E] shadow-lg z-10"
                 >
                   {step.id}
                 </motion.div>
-                
+
                 {/* Icon */}
                 <div className="flex items-center justify-center">
                   <Image
@@ -106,7 +112,7 @@ const GetStartedSection = () => {
                   />
                 </div>
               </motion.div>
-              
+
               <h4 className="text-center text-[18px] lg:text-[20px] font-bold text-[#1E1E1E] px-4 max-w-[280px] group-hover:text-primary transition-colors">
                 {step.label}
               </h4>
