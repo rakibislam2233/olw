@@ -26,7 +26,7 @@ const PartnerSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-12 md:py-16 overflow-hidden">
+    <section className="w-full bg-white pt-[40px] md:pt-[50px] overflow-hidden">
       <div className="w-full mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 15 }}
@@ -38,7 +38,7 @@ const PartnerSection = () => {
           Trusted by leaders in 50+ industries
         </motion.h2>
         
-        <div className="bg-[#F8F9FA] py-10 md:py-8">
+        <div className="bg-[#F8F9FA] py-5">
           <Marquee gradient={false} speed={50} pauseOnHover={true}>
             {partners.concat(partners).map((partner, index) => (
               <div
@@ -48,8 +48,8 @@ const PartnerSection = () => {
                 <Image
                   src={partner.logo}
                   alt={partner.name}
-                  height={40}
-                  className="w-auto h-8 md:h-9 lg:h-[40px] max-w-[120px] md:max-w-[160px] cursor-pointer"
+                  height={35}
+                  className="w-auto max-w-[140px] cursor-pointer"
                 />
               </div>
             ))}

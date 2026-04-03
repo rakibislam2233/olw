@@ -61,17 +61,16 @@ const PricingSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-10 md:py-[50px]">
+    <section className="w-full bg-white pt-10 md:pt-[50px] pb-10 md:pb-[50px]">
       <div className="container mx-auto px-4 md:px-5">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-[38.13px] font-bold text-black mb-4">
+          <h2 className="text-3xl md:text-[40px] font-bold text-black mb-4">
             Airnbn Assistent <span className="text-primary">pricing</span>
           </h2>
-          <p className="text-[#000000] text-sm md:text-base font-medium opacity-80">
+          <p className="text-[#191D23] text-base md:text-[20px]">
             Choose a plan that&apos;s right for you
           </p>
-
           {/* Toggle */}
           <div className="mt-10 flex items-center justify-center gap-4 relative">
             <span
@@ -123,7 +122,7 @@ const PricingSection = () => {
 
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {plans.map((plan, index) => (
+          {plans?.map((plan, index) => (
             <div
               key={index}
               className={cn(
@@ -133,36 +132,40 @@ const PricingSection = () => {
                   : "bg-white border border-primary/30",
               )}
             >
-              <h3 className="text-2xl font-bold mb-4">{plan.name}</h3>
+              <h3 className="text-[18px] md:text-[22px] font-bold mb-3">
+                {plan.name}
+              </h3>
               <p
                 className={cn(
-                  "text-xs leading-relaxed mb-8 h-10 overflow-hidden",
-                  plan.highlight ? "text-white/90" : "text-[#00000066]",
+                  "text-balance mb-6",
+                  plan.highlight ? "text-white/90" : "text-[#64748B]",
                 )}
               >
                 {plan.desc}
               </p>
 
               <div className="flex items-baseline gap-1 mb-8">
-                <span className="text-4xl font-bold">
-                  ${isYearly ? plan.price * 0.75 : plan.price}
-                </span>
-                <span
-                  className={cn(
-                    "text-sm font-medium",
-                    plan.highlight ? "text-white/60" : "text-[#00000066]",
-                  )}
-                >
-                  / Month
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className="text-4xl md:text-5xl lg:text-6xl font-semibold">
+                    ${isYearly ? plan.price * 0.75 : plan.price}
+                  </span>
+                  <span
+                    className={cn(
+                      "text-sm font-medium",
+                      plan.highlight ? "text-white/60" : "text-[#00000066]",
+                    )}
+                  >
+                    / Month
+                  </span>
+                </div>
               </div>
 
               <Button
                 className={cn(
-                  "w-full h-[45px] rounded-[5px] font-bold text-sm mb-8",
+                  "w-full h-[44px] rounded-[4px] text-base mb-10 cursor-pointer",
                   plan.highlight
                     ? "bg-white text-primary hover:bg-white/90"
-                    : "bg-transparent border border-primary text-primary hover:bg-primary/5",
+                    : "bg-transparent border-2 border-primary/70 text-primary hover:bg-primary/5 hover:text-primary",
                 )}
                 variant={plan.highlight ? "default" : "outline"}
               >
@@ -174,28 +177,28 @@ const PricingSection = () => {
                   <div key={fIdx} className="flex items-start gap-3">
                     <div
                       className={cn(
-                        "w-5 h-5 rounded-full flex items-center justify-center shrink-0",
+                        "size-7 md:size-8 rounded-full flex items-center justify-center shrink-0",
                         feature.included
                           ? plan.highlight
-                            ? "bg-white/20"
-                            : "bg-primary/10"
+                            ? "bg-white/70"
+                            : "bg-primary/30"
                           : plan.highlight
-                            ? "bg-white/10 opacity-50"
-                            : "bg-black/5 opacity-50",
+                            ? "bg-white/70"
+                            : "bg-black/5",
                       )}
                     >
                       {feature.included ? (
                         <Check
                           className={cn(
-                            "w-3 h-3",
-                            plan.highlight ? "text-white" : "text-primary",
+                            "size-4",
+                            plan.highlight ? "text-primary/80" : "text-primary",
                           )}
                         />
                       ) : (
                         <X
                           className={cn(
-                            "w-3 h-3",
-                            plan.highlight ? "text-white/40" : "text-black/30",
+                            "size-4",
+                            plan.highlight ? "text-black/30" : "text-black",
                           )}
                         />
                       )}

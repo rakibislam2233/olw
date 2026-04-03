@@ -67,7 +67,7 @@ const ServiceSection = () => {
   };
 
   return (
-    <section className="w-full bg-white py-16 md:py-24">
+    <section className="w-full bg-white pt-10 md:pt-[50px] pb-10 md:pb-[50px]">
       <div className="container mx-auto px-4 md:px-5">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -98,7 +98,10 @@ const ServiceSection = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ y: -10, boxShadow: "0px 20px 40px rgba(237,60,106,0.15)" }}
+              whileHover={{
+                y: -10,
+                boxShadow: "0px 20px 40px rgba(237,60,106,0.15)",
+              }}
               className={`w-full flex flex-col justify-between bg-white border ${
                 index === 0
                   ? "shadow-[0px_10px_60px_rgba(0,0,0,0.05)] border-transparent"
@@ -109,26 +112,24 @@ const ServiceSection = () => {
               {index === 0 && (
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#ED3C6A08] rounded-full blur-3xl group-hover:bg-[#ED3C6A15] transition-colors" />
               )}
-              
+
               <div className="mb-8">
-                <div className="w-[65px] h-[65px] flex items-center justify-center rounded-2xl bg-[#ED3C6A0A] group-hover:bg-primary transition-colors duration-300">
-                  <Image
-                    src={service.icon}
-                    alt={service.title}
-                    width={40}
-                    height={40}
-                    className="group-hover:brightness-0 group-hover:invert transition-all duration-300"
-                  />
-                </div>
+                <Image
+                  src={service.icon}
+                  alt={service.title}
+                  width={85}
+                  height={85}
+                  className="transition-all duration-300"
+                />
               </div>
-              
+
               <h3 className="text-[22px] font-bold text-black mb-4">
                 {service.title}
               </h3>
               <p className="text-[#000000] text-sm md:text-[15px] leading-relaxed mb-8 opacity-70">
                 {service.desc}
               </p>
-              
+
               <Button
                 variant="outline"
                 className="w-fit cursor-pointer border-primary/40 rounded-full text-primary hover:bg-primary hover:text-white h-[40px] px-8 transition-all hover:border-primary"

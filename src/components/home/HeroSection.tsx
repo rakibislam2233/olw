@@ -60,8 +60,8 @@ const HeroSection = () => {
             <Image
               src={brand1}
               alt="Brand 1"
-              width={95}
-              height={95}
+              width={100}
+              height={100}
               className="drop-shadow-xl"
             />
           </motion.div>
@@ -75,8 +75,8 @@ const HeroSection = () => {
             <Image
               src={brand2}
               alt="Brand 2"
-              width={70}
-              height={70}
+              width={80}
+              height={80}
               className="drop-shadow-xl"
             />
           </motion.div>
@@ -90,8 +90,8 @@ const HeroSection = () => {
             <Image
               src={brand3}
               alt="Brand 3"
-              width={75.89}
-              height={75.89}
+              width={80}
+              height={80}
               className="drop-shadow-xl"
             />
           </motion.div>
@@ -105,8 +105,8 @@ const HeroSection = () => {
             <Image
               src={brand4}
               alt="Brand 4"
-              width={90}
-              height={90}
+              width={100}
+              height={100}
               className="drop-shadow-xl"
             />
           </motion.div>

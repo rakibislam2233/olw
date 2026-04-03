@@ -25,23 +25,23 @@ const ToolSection = () => {
   return (
     <section className="w-full bg-white py-10 md:py-[50px]">
       <div className="px-4 md:px-5 text-center mb-[136px]">
-        <h2 className="text-3xl md:text-[38.13px] font-bold text-black mb-6">
+        <h2 className="text-3xl md:text-[32px] font-bold text-black mb-6">
           Our <span className="text-primary">Tools</span>
         </h2>
-        <p className="text-[#000000] text-sm md:text-base leading-relaxed max-w-[800px] mb-12 mx-auto">
+        <p className="text-[#000000] text-sm leading-relaxed max-w-[780px] font-semibold mb-12 mx-auto">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
         </p>
       </div>
-      <div className="bg-[#F6F6F6] pt-[38px] pb-[85px] px-6 md:px-12">
+      <div className="bg-[#F6F6F6] pt-[40px] pb-[85px] px-6 md:px-12">
         <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {tools?.map((tool, index) => (
             <div
               key={index}
               className={cn(
-                "bg-white rounded-[13px] p-6 flex items-center justify-center min-h-[140px] transition-all duration-300 transform hover:-translate-y-1",
+                "bg-white rounded-[11px] p-6 flex items-center justify-center min-h-[140px] transition-all duration-300 transform hover:-translate-y-1",
                 index === 0
                   ? "shadow-[0px_4px_30.3px_rgba(255,138,168,0.28)]"
                   : "hover:shadow-[0px_4px_30.3px_rgba(255,138,168,0.28)]",
