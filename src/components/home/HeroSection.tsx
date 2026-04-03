@@ -21,7 +21,8 @@ const HeroSection = () => {
           backgroundSize: "120px 120px",
           backgroundPosition: "center top",
           maskImage: "radial-gradient(circle, rgba(0,0,0,0.2), black 80%)",
-          WebkitMaskImage: "radial-gradient(circle, rgba(0,0,0,0.2), black 80%)",
+          WebkitMaskImage:
+            "radial-gradient(circle, rgba(0,0,0,0.2), black 80%)",
         }}
       ></div>
 
@@ -33,14 +34,8 @@ const HeroSection = () => {
         <div className="absolute top-1/2 left-1/2 w-full max-w-[1200px] -translate-x-1/2 -translate-y-1/2 h-full">
           {/* Floating Brands */}
           {/* Brand 1 (Top Left) */}
-          <div className="absolute top-[10%] left-[15%] -rotate-15">
-            <Image
-              src={brand1}
-              alt="Brand 1"
-              width={100}
-              height={100}
-              className="drop-shadow-xl"
-            />
+          <div className="absolute top-[15%] left-[15%] -rotate-[4.84deg]">
+            <Image src={brand1} alt="Brand 1" width={106.24} height={106.24} />
           </div>
 
           {/* Brand 2 (Top Right) */}
@@ -89,8 +84,11 @@ const HeroSection = () => {
 
       {/* Main Content */}
       <div className="container relative z-10 mx-auto px-4 text-center max-w-[800px] flex flex-col items-center">
-        <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-black leading-[1.1] mb-6 tracking-tight">
-          Airbnb Assistants For <br /> Property Management
+        <h1 className="text-4xl md:text-5xl font-bold text-[#000000] leading-[1.1] mb-6 tracking-tight">
+          Airbnb Assistants For <br />{" "}
+          <span className="text-[38.13px] font-medium text-[#000000]">
+            Property Management
+          </span>
         </h1>
         <p className="text-[#4E4E4E] text-sm md:text-base leading-relaxed max-w-[620px] mb-10">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
