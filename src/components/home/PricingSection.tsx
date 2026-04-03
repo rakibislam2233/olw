@@ -62,10 +62,10 @@ const PricingSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white pt-[73px]">
+    <section className="w-full bg-white pt-12 md:pt-16 lg:pt-[73px]">
       <div className="container mx-auto px-4 md:px-5">
         {/* Header */}
-        <div className="text-center mb-[93px]">
+        <div className="text-center mb-12 md:mb-16 lg:mb-[93px]">
           <h2 className="text-3xl md:text-[40px] font-bold text-black mb-4">
             Airnbn Assistent <span className="text-primary">pricing</span>
           </h2>

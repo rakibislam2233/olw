@@ -112,7 +112,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full bg-white  mt-[77px] pt-16 lg:pt-20 border-t border-[#0000000D]">
+    <footer className="w-full bg-white mt-10 md:mt-14 lg:mt-[77px] pt-16 lg:pt-20 border-t border-[#0000000D]">
       <div className="container mx-auto px-4 md:px-5">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 lg:mb-24">
           {/* Logo & Description */}

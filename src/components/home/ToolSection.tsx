@@ -23,8 +23,8 @@ const ToolSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white pt-[84px]">
-      <div className="px-4 md:px-5 text-center mb-[136px]">
+    <section className="w-full bg-white pt-12 md:pt-16 lg:pt-[84px]">
+      <div className="px-4 md:px-5 text-center mb-12 md:mb-20 lg:mb-[136px]">
         <h2 className="text-3xl md:text-[32px] font-bold text-black mb-6">
           Our <span className="text-primary">Tools</span>
         </h2>

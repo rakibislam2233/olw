@@ -67,7 +67,7 @@ const ServiceSection = () => {
   };
 
   return (
-    <section className="w-full bg-white pt-[55px]">
+    <section className="w-full bg-white pt-8 md:pt-12 lg:pt-[55px]">
       <div className="container mx-auto px-4 md:px-5">
         <motion.div
           initial={{ opacity: 0, y: -20 }}

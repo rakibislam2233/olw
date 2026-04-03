@@ -12,7 +12,7 @@ import avatar3 from "@/assets/home/get-in-touch/person3.png";
 
 const ContactCtaSection = () => {
   return (
-    <section className="w-full bg-white pt-[20px]">
+    <section className="w-full bg-white pt-5 lg:pt-[20px]">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}

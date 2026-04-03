@@ -30,7 +30,7 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section className="w-full bg-white pt-[84px]">
+    <section className="w-full bg-white pt-12 md:pt-16 lg:pt-[84px]">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}

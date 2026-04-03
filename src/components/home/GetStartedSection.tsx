@@ -47,14 +47,14 @@ const GetStartedSection = () => {
   };
 
   return (
-    <section className="w-full bg-white pt-[67px]">
+    <section className="w-full bg-white pt-10 md:pt-12 lg:pt-[67px]">
       <div className="w-full max-w-6xl mx-auto px-4 md:px-5">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-[63px]"
+          className="text-center mb-8 md:mb-12 lg:mb-[63px]"
         >
           <h2 className="text-3xl md:text-[42px] font-bold text-black mb-6">
             Getting Started is <span className="text-primary">Easy</span>
