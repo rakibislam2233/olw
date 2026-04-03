@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { motion } from "framer-motion";
 
 // Import service icons
 import icon1 from "@/assets/home/service/icon1.png";
@@ -44,53 +47,97 @@ const ServiceSection = () => {
     },
   ];
 
-  return (
-    <section className="w-full bg-white py-10 md:py-[50px]">
-      <div className="container mx-auto px-4 md:px-5 text-center">
-        <h2 className="text-3xl md:text-[32px] font-bold text-black mb-6">
-          Our <span className="text-primary">Service</span>
-        </h2>
-        <p className="text-[#000000] text-sm md:text-base leading-relaxed max-w-[800px] mb-12 mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services?.map((service, index) => (
-            <div
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
+  return (
+    <section className="w-full bg-white py-16 md:py-24">
+      <div className="container mx-auto px-4 md:px-5">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-[42px] font-bold text-black mb-6">
+            Our <span className="text-primary">Service</span>
+          </h2>
+          <p className="text-[#000000] text-sm md:text-base leading-relaxed max-w-[800px] mx-auto opacity-70">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {services.map((service, index) => (
+            <motion.div
               key={index}
-              className={`w-full max-w-[400px] flex flex-col justify-between bg-white border ${
+              variants={itemVariants}
+              whileHover={{ y: -10, boxShadow: "0px 20px 40px rgba(237,60,106,0.15)" }}
+              className={`w-full flex flex-col justify-between bg-white border ${
                 index === 0
-                  ? "shadow-[0px_4px_90.3px_rgba(215,205,207,0.47)] border-transparent"
-                  : "border-primary"
-              } rounded-[13px] p-8 text-left hover:shadow-[0px_10px_40px_rgba(250,196,210,0.4)] hover:-translate-y-2 transition-all duration-300 group`}
+                  ? "shadow-[0px_10px_60px_rgba(0,0,0,0.05)] border-transparent"
+                  : "border-[#F8BECD]"
+              } rounded-[20px] p-9 text-left transition-all duration-300 group relative overflow-hidden`}
             >
-              <div className="mb-6">
-                <Image
-                  src={service.icon}
-                  alt={service.title}
-                  width={65}
-                  height={65}
-                  className="mb-4"
-                />
+              {/* Subtle background glow on first item or hover */}
+              {index === 0 && (
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#ED3C6A08] rounded-full blur-3xl group-hover:bg-[#ED3C6A15] transition-colors" />
+              )}
+              
+              <div className="mb-8">
+                <div className="w-[65px] h-[65px] flex items-center justify-center rounded-2xl bg-[#ED3C6A0A] group-hover:bg-primary transition-colors duration-300">
+                  <Image
+                    src={service.icon}
+                    alt={service.title}
+                    width={40}
+                    height={40}
+                    className="group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                  />
+                </div>
               </div>
-              <h3 className="text-[22.88px] font-bold text-black mb-4">
+              
+              <h3 className="text-[22px] font-bold text-black mb-4">
                 {service.title}
               </h3>
-              <p className="text-[#000000] text-sm md:text-base leading-relaxed mb-6">
+              <p className="text-[#000000] text-sm md:text-[15px] leading-relaxed mb-8 opacity-70">
                 {service.desc}
               </p>
+              
               <Button
                 variant="outline"
-                className="w-fit cursor-pointer border-primary rounded-full text-primary hover:bg-primary hover:text-white h-[35px] text-[15.25px] flex items-center justify-center px-6 transition-all group-hover:scale-105"
+                className="w-fit cursor-pointer border-primary/40 rounded-full text-primary hover:bg-primary hover:text-white h-[40px] px-8 transition-all hover:border-primary"
               >
                 Read More
               </Button>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

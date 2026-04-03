@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
 
 // Importing companies SVG logos
 import company1 from "@/assets/home/partner/company1.svg";
@@ -25,9 +28,15 @@ const PartnerSection = () => {
   return (
     <section className="w-full bg-white py-12 md:py-16 overflow-hidden">
       <div className="w-full mx-auto">
-        <h2 className="text-center text-[18px] md:text-[22px] font-bold text-[#000000] mb-10 px-4">
+        <motion.h2
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center text-[18px] md:text-[22px] font-bold text-[#000000] mb-10 px-4"
+        >
           Trusted by leaders in 50+ industries
-        </h2>
+        </motion.h2>
         
         <div className="bg-[#F8F9FA] py-10 md:py-8">
           <Marquee gradient={false} speed={50} pauseOnHover={true}>

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   Accordion,
@@ -5,73 +7,81 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { motion } from "framer-motion";
 
 const FaqSection = () => {
   const faqs = [
     {
       question: "Is there a free trial available?",
       answer:
-        "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+        "Yes, you can try our platform free for 30 days. No credit card required to get started with your first property listing.",
     },
     {
-      question: "Can I change my plan later?",
+      question: "Can I manage properties across different countries?",
       answer:
-        "Yes, you can easily change your plan at any time through your dashboard settings.",
+        "Absolutely. Our platform is designed for global property management with support for multiple currencies, languages, and time zones.",
     },
     {
-      question: "What is your cancellation policy?",
+      question: "What platforms do you sync with?",
       answer:
-        "You can cancel your subscription at any time without any hidden fees or charges.",
+        "We sync directly with Airbnb, Booking.com, Vrbo, TripAdvisor, and 50+ other major vacation rental platforms in real-time.",
     },
     {
-      question: "Can other info be added to an invoice?",
+      question: "Is my data secure?",
       answer:
-        "Yes, you can add custom billing info like VAT numbers and addresses to your invoices.",
+        "We use bank-level encryption and follow industry-leading security practices to ensure all your property and guest data is safe.",
     },
     {
-      question: "How does billing work?",
+      question: "How do I get started?",
       answer:
-        "We offer monthly and annual billing cycles. You can pay via credit card, PayPal, or bank transfer.",
-    },
-    {
-      question: "How do I change my account email?",
-      answer:
-        "You can change your account email address from the Account Settings section of your dashboard.",
+        "Simply click 'Schedule a Meeting' or sign up for a free trial. Our onboarding team will help you set up your listings in minutes.",
     },
   ];
 
   return (
     <section className="w-full bg-white py-16 lg:py-24">
       <div className="container mx-auto px-4 md:px-5">
-        <div className="bg-[#F9FAFB] rounded-[24px] p-8 md:p-16 lg:p-20">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-[38.13px] font-bold text-black mb-4">
-              Frequently asked <span className="text-primary">questions</span>
-            </h2>
-            <p className="text-[#000000B2] text-sm md:text-base font-medium">
-              Everything you need to know about the product and billing.
-            </p>
-          </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-[42px] font-bold text-black mb-6">
+            Frequently Asked <span className="text-primary">Questions</span>
+          </h2>
+          <p className="text-[#000000] text-sm md:text-base leading-relaxed max-w-[700px] mx-auto opacity-70">
+            Everything you need to know about our Airbnb assistant platform.
+            Can&apos;t find the answer you&apos;re looking for? Reach out to our
+            team.
+          </p>
+        </motion.div>
 
-          <div className="max-w-[768px] mx-auto">
-            <Accordion className="w-full space-y-4">
-              {faqs.map((faq, index) => (
-                <AccordionItem
-                  key={index}
-                  value={`item-${index}`}
-                  className="border-b border-[#E5E7EB] py-4"
-                >
-                  <AccordionTrigger className="text-left text-[18px] font-semibold text-black hover:no-underline hover:text-primary transition-colors">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-[#4B5563] text-base leading-relaxed pt-2">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="max-w-[900px] mx-auto"
+        >
+          <Accordion className="w-full space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="border border-[#F8BECD] rounded-[16px] overflow-hidden px-6 bg-white hover:border-primary/40 transition-colors shadow-[0px_10px_40px_rgba(237,60,106,0.02)]"
+              >
+                <AccordionTrigger className="text-[17px] md:text-[19px] py-6 font-bold text-[#1E1E1E] hover:no-underline text-left transition-all">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-[15px] md:text-[16px] leading-[1.6] text-black/70 pb-6 transition-all">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </motion.div>
       </div>
     </section>
   );
