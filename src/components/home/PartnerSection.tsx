@@ -34,7 +34,7 @@ const PartnerSection = () => {
             {partners.concat(partners).map((partner, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center mx-8 md:mx-12 transition-all duration-300 transform hover:scale-110 grayscale hover:grayscale-0 opacity-60 hover:opacity-100"
+                className="flex items-center justify-center mx-8 md:mx-12 transition-all duration-300 transform opacity-60 hover:opacity-100"
               >
                 <Image
                   src={partner.logo}
