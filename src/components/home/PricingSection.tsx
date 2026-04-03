@@ -130,7 +130,7 @@ const PricingSection = () => {
                 "relative flex flex-col p-8 rounded-[15.25px] transition-all duration-300",
                 plan.highlight
                   ? "bg-primary text-white shadow-[0px_10px_40px_rgba(237,60,106,0.2)]"
-                  : "bg-white border border-[#0000000D] shadow-[0px_4px_30px_rgba(0,0,0,0.03)]",
+                  : "bg-white border border-primary/30",
               )}
             >
               <h3 className="text-2xl font-bold mb-4">{plan.name}</h3>
