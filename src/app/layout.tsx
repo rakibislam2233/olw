@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { DM_Sans, Geist } from "next/font/google";
+import { DM_Sans, Geist, Manrope } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
+const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
 const dmSans = DM_Sans({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
         dmSans.className,
         "font-sans",
         geist.variable,
+        manrope.variable,
       )}
       suppressHydrationWarning={true}
     >

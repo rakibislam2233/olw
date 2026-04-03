@@ -14,7 +14,7 @@ const FaqSection = () => {
     {
       question: "Is there a free trial available?",
       answer:
-        "Yes, you can try our platform free for 30 days. No credit card required to get started with your first property listing.",
+        "Yes, you can try our platform free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
     },
     {
       question: "Can I manage properties across different countries?",
@@ -36,6 +36,11 @@ const FaqSection = () => {
       answer:
         "Simply click 'Schedule a Meeting' or sign up for a free trial. Our onboarding team will help you set up your listings in minutes.",
     },
+    {
+      question: "How do I change my account email?",
+      answer:
+        "You can change your account email in the settings page of your dashboard. If you need help, our support team is available 24/7.",
+    },
   ];
 
   return (
@@ -51,10 +56,8 @@ const FaqSection = () => {
           <h2 className="text-3xl md:text-[42px] font-bold text-black mb-6">
             Frequently Asked <span className="text-primary">Questions</span>
           </h2>
-          <p className="text-[#000000] text-sm md:text-base leading-relaxed max-w-[700px] mx-auto opacity-70">
-            Everything you need to know about our Airbnb assistant platform.
-            Can&apos;t find the answer you&apos;re looking for? Reach out to our
-            team.
+          <p className="text-[#64748B] text-base md:text-lg leading-relaxed max-w-[700px] mx-auto font-medium">
+            Everything you need to know about the product and billing.
           </p>
         </motion.div>
 
@@ -63,21 +66,13 @@ const FaqSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-[900px] mx-auto"
+          className="max-w-[1000px] mx-auto"
         >
-          <Accordion className="w-full space-y-4">
+          <Accordion className="w-full border-t border-[#ED3C6A20]">
             {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="border border-[#F8BECD] rounded-[16px] overflow-hidden px-6 bg-white hover:border-primary/40 transition-colors shadow-[0px_10px_40px_rgba(237,60,106,0.02)]"
-              >
-                <AccordionTrigger className="text-[17px] md:text-[19px] py-6 font-bold text-[#1E1E1E] hover:no-underline text-left transition-all">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-[15px] md:text-[16px] leading-[1.6] text-black/70 pb-6 transition-all">
-                  {faq.answer}
-                </AccordionContent>
+              <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                <AccordionContent>{faq.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

@@ -146,7 +146,7 @@ const PricingSection = () => {
 
               <div className="flex items-baseline gap-1 mb-8">
                 <div className="flex items-center gap-2">
-                  <span className="text-4xl md:text-5xl lg:text-6xl font-semibold">
+                  <span className="text-4xl md:text-5xl lg:text-6xl font-semibold font-manrope">
                     ${isYearly ? plan.price * 0.75 : plan.price}
                   </span>
                   <span
