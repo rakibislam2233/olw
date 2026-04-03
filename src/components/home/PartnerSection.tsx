@@ -22,7 +22,7 @@ const PartnerSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-[50px]">
+    <section className="w-full bg-white py-10 md:py-[50px]">
       <div className="w-full mx-auto">
         <h2 className="text-center text-[20px] font-bold text-[#000000] mb-9">
           Trusted by leaders in 50+ industries
