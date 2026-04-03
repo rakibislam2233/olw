@@ -1,10 +1,11 @@
 "use client";
-
 import React, { useState } from "react";
 import { Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { cn } from "@/lib/utils";
+import arrow from "@/assets/images/arrow.png";
+import Image from "next/image";
 
 const PricingSection = () => {
   const [isYearly, setIsYearly] = useState(false);
@@ -61,10 +62,10 @@ const PricingSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white pt-10 md:pt-[50px] pb-10 md:pb-[50px]">
+    <section className="w-full bg-white pt-[73px]">
       <div className="container mx-auto px-4 md:px-5">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-[93px]">
           <h2 className="text-3xl md:text-[40px] font-bold text-black mb-4">
             Airnbn Assistent <span className="text-primary">pricing</span>
           </h2>
@@ -75,7 +76,7 @@ const PricingSection = () => {
           <div className="mt-10 flex items-center justify-center gap-4 relative">
             <span
               className={cn(
-                "text-sm font-semibold transition-colors",
+                "text-base transition-colors",
                 !isYearly ? "text-black" : "text-[#00000066]",
               )}
             >
@@ -88,32 +89,16 @@ const PricingSection = () => {
             />
             <span
               className={cn(
-                "text-sm font-semibold transition-colors",
-                isYearly ? "text-black" : "text-[#00000066]",
+                "text-base transition-colors text-black",
               )}
             >
               Pay Yearly
             </span>
 
             {/* Save 25% Arrow */}
-            <div className="absolute left-[calc(50%+80px)] top-0 hidden md:flex items-center gap-2">
-              <svg
-                width="40"
-                height="24"
-                viewBox="0 0 40 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="text-primary"
-              >
-                <path
-                  d="M1 23C1 23 15.5 24 25.5 13.5C35.5 3 39 1 39 1M39 1H34M39 1V6"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <span className="whitespace-nowrap text-xs font-bold text-primary">
+            <div className="absolute left-[calc(55%+80px)] -top-4 hidden md:flex items-center gap-1">
+              <Image src={arrow} alt="arrow" width={90} height={55} />
+              <span className="whitespace-nowrap text-[18px] font-medium  mt-7 text-primary">
                 Save 25%
               </span>
             </div>

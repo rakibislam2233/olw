@@ -26,14 +26,14 @@ const PartnerSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white pt-[40px] md:pt-[50px] overflow-hidden">
+    <section className="w-full bg-white pt-[20px] sm:pt-[30px] lg:pt-[50px] overflow-hidden">
       <div className="w-full mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center text-[18px] md:text-[22px] font-bold text-[#000000] mb-10 px-4"
+          className="text-center text-[18px] md:text-[22px] font-bold text-[#000000] mb-9 px-4"
         >
           Trusted by leaders in 50+ industries
         </motion.h2>

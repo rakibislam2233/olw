@@ -67,16 +67,16 @@ const ServiceSection = () => {
   };
 
   return (
-    <section className="w-full bg-white pt-10 md:pt-[50px] pb-10 md:pb-[50px]">
+    <section className="w-full bg-white pt-[55px]">
       <div className="container mx-auto px-4 md:px-5">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-14"
         >
-          <h2 className="text-3xl md:text-[42px] font-bold text-black mb-6">
+          <h2 className="text-3xl md:text-[42px] font-bold text-black mb-4">
             Our <span className="text-primary">Service</span>
           </h2>
           <p className="text-[#000000] text-sm md:text-base leading-relaxed max-w-[800px] mx-auto opacity-70">
@@ -91,8 +91,8 @@ const ServiceSection = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {services.map((service, index) => (
             <motion.div
@@ -106,7 +106,7 @@ const ServiceSection = () => {
                 index === 0
                   ? "shadow-[0px_10px_60px_rgba(0,0,0,0.05)] border-transparent"
                   : "border-[#F8BECD]"
-              } rounded-[20px] p-9 text-left transition-all duration-300 group relative overflow-hidden`}
+              } rounded-[13px] p-9 text-left transition-all duration-300 group relative overflow-hidden`}
             >
               {/* Subtle background glow on first item or hover */}
               {index === 0 && (
