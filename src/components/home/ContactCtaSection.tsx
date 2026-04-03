@@ -6,9 +6,9 @@ import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 
 // Re-using testimonial images for avatars 
-import avatar1 from "@/assets/home/testimonial/testimonial1.png";
-import avatar2 from "@/assets/home/testimonial/testimonial2.png";
-import avatar3 from "@/assets/home/testimonial/testimonial3.png";
+import avatar1 from "@/assets/home/get-in-touch/person1.png";
+import avatar2 from "@/assets/home/get-in-touch/person2.png";
+import avatar3 from "@/assets/home/get-in-touch/person3.png";
 
 const ContactCtaSection = () => {
   return (

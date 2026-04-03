@@ -117,7 +117,7 @@ const WhyChooseUs = () => {
               </motion.div>
 
               {/* ── Floating: Project Card ── */}
-              <motion.div className="absolute -left-5 -top-[15%] z-20 w-[160px] md:w-[250px] hidden sm:block">
+              <motion.div className="absolute -left-5 -top-[15%] z-20 w-[160px] md:w-[250px]">
                 <Image
                   src={projectCard}
                   alt="Project listing"
@@ -135,7 +135,7 @@ const WhyChooseUs = () => {
               </motion.div>
 
               {/* ── Floating: Calendar — bottom left ── */}
-              <motion.div className="absolute -left-12 -bottom-[25%] z-20 w-[150px] md:w-[240px] hidden sm:block">
+              <motion.div className="absolute left-0 sm:-left-12 -bottom-[25%] z-20 w-[150px] md:w-[240px]">
                 <Image
                   src={calendar}
                   alt="Booking calendar"

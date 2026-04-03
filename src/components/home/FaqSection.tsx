@@ -41,7 +41,7 @@ const FaqSection = () => {
   return (
     <section className="w-full bg-white pb-20 lg:pb-32">
       <div className="container mx-auto">
-        <div className="bg-[#F9FAFB] rounded-[16px] p-20">
+        <div className="bg-[#F9FAFB] rounded-[16px] p-5 md:p-10 lg:p-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ const FaqSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-3xl mx-auto"
+            className="w-full md:max-w-3xl mx-auto"
           >
             <Accordion className="w-full">
               {faqs.map((faq, index) => (

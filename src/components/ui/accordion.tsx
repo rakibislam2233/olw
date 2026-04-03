@@ -43,7 +43,7 @@ function AccordionTrigger({
         <span className="group-aria-expanded/accordion-trigger:text-primary transition-colors">
           {children}
         </span>
-        <div className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-primary text-primary transition-transform duration-300 group-aria-expanded/accordion-trigger:bg-primary group-aria-expanded/accordion-trigger:text-white">
+        <div className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-primary text-primary transition-transform duration-300 group-aria-expanded/accordion-trigger:bg-primary group-aria-expanded/accordion-trigger:text-white flex-shrink-0">
           <PlusIcon data-slot="accordion-trigger-icon" className="size-4 group-aria-expanded/accordion-trigger:hidden" />
           <MinusIcon data-slot="accordion-trigger-icon" className="hidden size-4 group-aria-expanded/accordion-trigger:inline" />
         </div>
