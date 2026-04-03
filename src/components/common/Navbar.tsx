@@ -72,22 +72,22 @@ const Navbar = () => {
                   <Image src={logo} alt="Logo" width={110} height={40} />
                 </SheetTitle>
               </SheetHeader>
-              <nav className="flex flex-col gap-6">
+              <nav className="flex flex-col gap-2 mt-4">
                 {navLinks?.map((link) => (
                   <Link
                     key={link.label}
                     href={link.href}
                     className={cn(
-                      "text-[18px] text-[#1E1E1E] hover:text-primary transition-colors",
-                      link.isActive && "text-primary font-bold"
+                      "text-[18px] text-[#1E1E1E] py-4 px-4 rounded-lg transition-all duration-200 hover:bg-[#F5F5F5] hover:text-primary",
+                      link.isActive && "text-primary font-bold bg-[#ED3C6A0A]"
                     )}
                   >
                     {link.label}
                   </Link>
                 ))}
-                <div className="pt-4">
-                  <Button className="w-full h-[50px] rounded-[5px] bg-primary text-white">
-                    Schedule A Meeting <ArrowRight className="ml-2" />
+                <div className="pt-8 px-4">
+                  <Button className="w-full h-[55px] rounded-[8px] bg-primary text-white font-bold text-lg shadow-lg hover:bg-primary/90 transition-all">
+                    Schedule A Meeting <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
               </nav>
