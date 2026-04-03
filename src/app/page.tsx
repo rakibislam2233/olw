@@ -4,6 +4,8 @@ import ServiceSection from "@/components/home/ServiceSection";
 import PricingSection from "@/components/home/PricingSection";
 import ToolSection from "@/components/home/ToolSection";
 import GetStartedSection from "@/components/home/GetStartedSection";
+import WhyChooseUs from "@/components/home/WhyChooseUs";
+import TestimonialSection from "@/components/home/TestimonialSection";
 import React from "react";
 
 const HomePage = () => {
@@ -15,6 +17,8 @@ const HomePage = () => {
       <PricingSection />
       <ToolSection />
       <GetStartedSection />
+      <WhyChooseUs />
+      <TestimonialSection />
     </main>
   );
 };
