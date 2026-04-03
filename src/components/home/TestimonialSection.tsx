@@ -54,27 +54,6 @@ const TestimonialSection = () => {
       rating: 4,
       bgColor: "bg-[#FEF3C7]",
     },
-    {
-      avatar: testimonial1,
-      name: "Guy Hawkins",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      rating: 5,
-      bgColor: "bg-[#E0F2FE]",
-    },
-    {
-      avatar: testimonial2,
-      name: "Albert Flores",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      rating: 4,
-      bgColor: "bg-[#FEF3C7]",
-    },
-    {
-      avatar: testimonial3,
-      name: "Kristin Watson",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      rating: 5,
-      bgColor: "bg-[#FEF3C7]",
-    },
   ];
 
   return (
@@ -98,9 +77,8 @@ const TestimonialSection = () => {
         }}
         className="w-full"
       >
-        <CarouselContent className="-ml-24">
+        <CarouselContent className="-ml-8 md:-ml-16 lg:-ml-24 py-12">
           {testimonials?.map((item, index) => {
-            const isActive = index === current;
             return (
               <CarouselItem
                 key={index}
@@ -108,9 +86,9 @@ const TestimonialSection = () => {
               >
                 <div
                   className={cn(
-                    "relative flex h-full items-start gap-5 px-8 py-10 rounded-[11px] transition-all duration-700 ease-in-out",
-                    isActive
-                      ? "bg-white"
+                    "relative flex h-full items-start gap-5 px-8 py-10 rounded-[11px] transition-all duration-700 ease-in-out hover:shadow-[0px_20px_40px_rgba(237,60,106,0.1)]",
+                    index === 1
+                      ? "bg-white shadow-[0px_10px_30px_rgba(0,0,0,0.06)]"
                       : "bg-[#F6F6F6]",
                   )}
                 >
@@ -158,7 +136,7 @@ const TestimonialSection = () => {
             );
           })}
         </CarouselContent>
-        <div className="mt-8 flex items-center justify-center gap-4">
+        <div className="mt-8 flex items-center justify-center gap-4 lg:hidden">
           <CarouselPrevious className="static translate-y-0" />
           <CarouselNext className="static translate-y-0" />
         </div>
