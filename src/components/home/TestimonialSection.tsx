@@ -57,7 +57,7 @@ const TestimonialSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-16 lg:py-24 overflow-hidden">
+    <section className="w-full bg-white pt-[121px] overflow-hidden">
       <div className="text-center px-4">
         <h2 className="text-3xl md:text-[32px] font-bold text-black mb-6">
           Check Our Clients <span className="text-primary">Review</span>

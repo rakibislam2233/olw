@@ -12,7 +12,7 @@ import avatar3 from "@/assets/home/get-in-touch/person3.png";
 
 const ContactCtaSection = () => {
   return (
-    <section className="w-full bg-white pb-20 lg:pb-32">
+    <section className="w-full bg-white pt-[20px]">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -26,7 +26,7 @@ const ContactCtaSection = () => {
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            className="flex -space-x-4 mb-10"
+            className="flex -space-x-4 mb-8"
           >
             {[avatar1, avatar2, avatar3].map((avatar, i) => (
               <motion.div
@@ -36,7 +36,7 @@ const ContactCtaSection = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 + i * 0.1 }}
                 whileHover={{ y: -5, scale: 1.1, zIndex: 30 }}
-                className="w-14 h-14 rounded-full border-4 border-white overflow-hidden shadow-md relative z-10"
+                className="w-14 h-14 rounded-full border-2 border-white overflow-hidden shadow-md relative z-10"
               >
                 <Image
                   src={avatar}
@@ -54,7 +54,7 @@ const ContactCtaSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="text-xl md:text-[30px] font-bold text-[#1E1E1E] mb-5 tracking-tight"
+            className="text-xl md:text-[30px] font-bold text-[#1E1E1E] mb-4 tracking-tight"
           >
             Still have Questions?
           </motion.h3>
@@ -64,7 +64,7 @@ const ContactCtaSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
-            className="text-[#9C9C9C] text-base md:text-[18px] max-w-[620px] mb-12 font-medium"
+            className="text-[#9C9C9C] text-base md:text-[18px] max-w-[620px] mb-8 font-medium"
           >
             Can&apos;t find the answer you&apos;re looking for? Please chat to our friendly team.
           </motion.p>

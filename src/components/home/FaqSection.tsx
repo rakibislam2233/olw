@@ -39,7 +39,7 @@ const FaqSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white pb-20 lg:pb-32">
+    <section className="w-full bg-white pt-[180px]">
       <div className="container mx-auto">
         <div className="bg-[#F9FAFB] rounded-[16px] p-5 md:p-10 lg:p-20">
           <motion.div
@@ -47,7 +47,7 @@ const FaqSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-[80px]"
           >
             <h2 className="text-3xl md:text-[36px] font-bold text-black mb-6">
               Frequently Asked <span className="text-primary">Questions</span>
