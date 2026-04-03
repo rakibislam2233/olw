@@ -61,11 +61,13 @@ const Navbar = () => {
         {/* Mobile Menu Trigger */}
         <div className="lg:hidden flex items-center gap-4">
           <Sheet>
-            <SheetTrigger>
-              <Button variant="ghost" size="icon" className="text-black">
-                <Menu className="w-6 h-6" />
-              </Button>
-            </SheetTrigger>
+            <SheetTrigger
+              render={
+                <Button variant="ghost" size="icon" className="text-black">
+                  <Menu className="w-6 h-6" />
+                </Button>
+              }
+            />
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <SheetHeader className="mb-8">
                 <SheetTitle className="text-left">
