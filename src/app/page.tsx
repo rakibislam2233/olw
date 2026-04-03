@@ -1,6 +1,7 @@
 import HeroSection from "@/components/home/HeroSection";
 import PartnerSection from "@/components/home/PartnerSection";
 import ServiceSection from "@/components/home/ServiceSection";
+import PricingSection from "@/components/home/PricingSection";
 import React from "react";
 
 const HomePage = () => {
@@ -9,6 +10,7 @@ const HomePage = () => {
       <HeroSection />
       <PartnerSection />
       <ServiceSection />
+      <PricingSection />
     </main>
   );
 };

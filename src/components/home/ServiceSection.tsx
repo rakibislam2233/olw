@@ -47,7 +47,7 @@ const ServiceSection = () => {
   return (
     <section className="w-full bg-white py-10 md:py-[50px]">
       <div className="container mx-auto px-4 md:px-5 text-center">
-        <h2 className="text-3xl md:text-[38.13px] font-bold text-black mb-6">
+        <h2 className="text-3xl md:text-[32px] font-bold text-black mb-6">
           Our <span className="text-primary">Service</span>
         </h2>
         <p className="text-[#000000] text-sm md:text-base leading-relaxed max-w-[800px] mb-12 mx-auto">
@@ -84,7 +84,7 @@ const ServiceSection = () => {
               </p>
               <Button
                 variant="outline"
-                className="w-fit border-primary rounded-full text-primary hover:bg-primary hover:text-white h-[35px] text-[15.25px] flex items-center justify-center px-6 transition-all group-hover:scale-105"
+                className="w-fit cursor-pointer border-primary rounded-full text-primary hover:bg-primary hover:text-white h-[35px] text-[15.25px] flex items-center justify-center px-6 transition-all group-hover:scale-105"
               >
                 Read More
               </Button>
